@@ -1,7 +1,3 @@
-# Начало работы с Create React App
-
-Этот проект был загружен с помощью [Create React App](https://github.com/facebook/create-react-app).
-
 ## Доступные скрипты
 
 В каталоге проекта вы можете запустить:
