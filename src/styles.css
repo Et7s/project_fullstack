@@ -1,0 +1,367 @@
+/* sportcenter-wireframes/src/styles.css */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: #f97316;
+  --orange-light: #ffedd5;
+  --orange-dark: #c2410c;
+  --black: #0a0a0a;
+  --gray-dark: #1f1f1f;
+  --gray-light: #2d2d2d;
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --danger: #f87171;
+  --success: #22c55e;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--black);
+  color: var(--text-primary);
+}
+
+nav {
+  background: var(--gray-dark);
+  border-bottom: 2px solid var(--orange);
+  border-radius: 0 0 16px 16px;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--orange);
+}
+
+nav button {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid var(--orange);
+  color: var(--text-primary);
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background: var(--orange);
+  color: var(--black);
+}
+
+button,
+.sort-button,
+.category-filter {
+  background: var(--gray-dark);
+  border: 1px solid var(--orange);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+button:hover,
+.sort-button:hover,
+.category-filter:hover,
+.category-filter.active {
+  background: var(--orange);
+  color: var(--black);
+}
+
+button.primary {
+  background: var(--orange);
+  color: var(--black);
+  border: none;
+}
+
+button.primary:hover {
+  background: var(--orange-dark);
+  color: var(--text-primary);
+}
+
+.card,
+.section-card,
+.diary-entry,
+.recommendation-card,
+.profile-card {
+  background: var(--gray-dark);
+  border: 1px solid var(--gray-light);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.section-card {
+  border-top: 4px solid var(--orange);
+}
+
+.section-card:hover,
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.diary-entry,
+.recommendation-card {
+  border-left: 4px solid var(--orange);
+  border-radius: 0 16px 16px 0;
+  padding: 1rem;
+}
+
+label {
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+input,
+select,
+textarea {
+  background: var(--gray-dark);
+  border: 1px solid var(--gray-light);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 0.75rem;
+  width: 100%;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text-primary);
+}
+
+h1 {
+  border-left: 6px solid var(--orange);
+  padding-left: 1rem;
+}
+
+a {
+  color: var(--orange);
+}
+
+a:hover {
+  color: var(--orange-light);
+}
+
+.page-container {
+  padding: 1rem;
+}
+
+.page-state {
+  padding: 2rem;
+}
+
+.category-grid {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.sections-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.section-card--rich {
+  overflow: hidden;
+}
+
+.section-card-image,
+.section-detail-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section-preview-block ul,
+.detail-list {
+  padding-left: 1.1rem;
+}
+
+.section-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sort-toolbar {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-detail-side {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.exercise-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.exercise-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--gray-light);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.exercise-card span {
+  color: var(--orange);
+}
+
+.diary-form-card,
+.diary-list {
+  max-width: 900px;
+}
+
+.diary-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-error {
+  color: var(--danger);
+  margin-top: 0.75rem;
+}
+
+.recommendation-card--rich {
+  max-width: 920px;
+  margin-bottom: 1rem;
+}
+
+.recommendation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.recommendation-type {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.9rem;
+  border: 1px solid currentColor;
+}
+
+.recommendation-type--rest {
+  color: #fca5a5;
+}
+
+.recommendation-type--increase {
+  color: #86efac;
+}
+
+.recommendation-type--maintain {
+  color: #fdba74;
+}
+
+
+.recommendation-title {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+}
+
+.recommendation-summary {
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.recommendation-content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.recommendation-section-block {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--gray-light);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.recommendation-section-block h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--orange);
+}
+
+.recommendation-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  line-height: 1.6;
+}
+
+.recommendation-warning {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(248, 113, 113, 0.5);
+  background: rgba(248, 113, 113, 0.08);
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .section-detail-layout,
+  .diary-form-grid,
+  .recommendation-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-toolbar,
+  .recommendation-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

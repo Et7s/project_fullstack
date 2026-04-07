@@ -1,0 +1,376 @@
+<!-- sportcenter-wireframes/src/components/wireframes.html-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спортцентр — каркасные прототипы</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            padding: 30px;
+            color: #222;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-weight: normal;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #aaa;
+            padding-bottom: 10px;
+        }
+        .screen {
+            background: white;
+            border: 3px solid #333;
+            padding: 20px;
+            margin-bottom: 40px;
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.1);
+        }
+        .screen-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            background: #ddd;
+            display: inline-block;
+            padding: 5px 15px;
+            border: 2px solid #333;
+        }
+        .row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .col {
+            flex: 1 1 250px;
+        }
+        .card {
+            border: 2px solid #333;
+            padding: 15px;
+            background: #fafafa;
+            margin-bottom: 15px;
+        }
+        .btn {
+            border: 2px solid #333;
+            background: white;
+            padding: 8px 15px;
+            cursor: default;
+            display: inline-block;
+            font-size: 0.9rem;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .btn.small {
+            padding: 4px 10px;
+            font-size: 0.8rem;
+        }
+        .badge {
+            border: 1px solid #333;
+            padding: 4px 8px;
+            background: #eee;
+            font-size: 0.8rem;
+        }
+        .placeholder {
+            background: #eaeaea;
+            border: 2px dashed #888;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            margin: 15px 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .grid-item {
+            border: 2px solid #333;
+            padding: 20px 10px;
+            text-align: center;
+            background: #f0f0f0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 2px solid #333;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #ddd;
+        }
+        .tabs {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+        .tab {
+            border: 2px solid #333;
+            border-bottom: none;
+            padding: 8px 20px;
+            background: #eee;
+            cursor: default;
+        }
+        .tab.active {
+            background: #333;
+            color: white;
+        }
+        .filter-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .filter {
+            border: 2px solid #333;
+            padding: 8px 15px;
+            background: white;
+            min-width: 150px;
+        }
+        .workout-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border: 2px solid #333;
+            padding: 12px;
+            margin-bottom: 10px;
+            background: #f9f9f9;
+        }
+        .workout-time {
+            font-weight: bold;
+            min-width: 70px;
+        }
+        .workout-info {
+            flex: 2;
+        }
+        .workout-spots {
+            min-width: 100px;
+            text-align: center;
+        }
+        .ai-message {
+            border: 3px dashed #666;
+            background: #f0f0f0;
+            padding: 15px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏋️ Спортцентр — каркасные прототипы (wireframes)</h1>
+
+        <!-- Экран 1: Главная -->
+        <div class="screen">
+            <div class="screen-title">Главная (для клиента)</div>
+            <div class="card">
+                <div style="font-size: 1.2rem; margin-bottom: 5px;">👋 С возвращением, Дмитрий!</div>
+                <div>Ваш прогресс: 12 тренировок в этом месяце</div>
+            </div>
+
+            <div class="card">
+                <div style="font-weight: bold; margin-bottom: 10px;">📅 Ближайшая тренировка</div>
+                <div><strong>Йога</strong> с Анной</div>
+                <div>22 февраля, 18:00</div>
+                <div style="margin-top: 10px;">
+                    <span class="btn small">Перенести</span>
+                    <span class="btn small">Отменить</span>
+                </div>
+            </div>
+
+            <div class="ai-message">
+                🤖 Рекомендация ИИ: Сегодня рекомендуется тренировка на спину и бицепс.
+            </div>
+
+            <div style="margin-top: 20px;">
+                <div style="font-weight: bold; margin-bottom: 10px;">🔥 Популярные секции</div>
+                <div class="grid">
+                    <div class="grid-item">Йога</div>
+                    <div class="grid-item">CrossFit</div>
+                    <div class="grid-item">Бокс</div>
+                    <div class="grid-item">Пилатес</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Экран 2: Расписание -->
+        <div class="screen">
+            <div class="screen-title">Расписание и запись</div>
+            <div class="filter-group">
+                <select class="filter">
+                    <option>Все секции</option>
+                    <option>Йога</option>
+                    <option>CrossFit</option>
+                </select>
+                <input type="date" class="filter" value="2026-02-23">
+            </div>
+
+            <div class="card">
+                <div style="font-weight: bold; margin-bottom: 10px;">📌 Мои записи</div>
+                <div class="workout-item" style="background: #e8f0fe;">
+                    <div class="workout-time">23 фев, 18:00</div>
+                    <div class="workout-info">Йога с Анной</div>
+                    <span class="badge">Записано</span>
+                </div>
+                <div style="color: #666;">Нет других записей</div>
+            </div>
+
+            <div style="font-weight: bold; margin: 20px 0 10px;">Доступные тренировки</div>
+            <div class="workout-item">
+                <div class="workout-time">18:00</div>
+                <div class="workout-info"><strong>Йога</strong> с Анной</div>
+                <div class="workout-spots">5/12 мест</div>
+                <span class="btn small">Записаться</span>
+            </div>
+            <div class="workout-item">
+                <div class="workout-time">19:30</div>
+                <div class="workout-info"><strong>CrossFit</strong> с Иваном</div>
+                <div class="workout-spots">2/10 мест</div>
+                <span class="btn small">Записаться</span>
+            </div>
+            <div class="workout-item">
+                <div class="workout-time">10:00</div>
+                <div class="workout-info"><strong>Бокс</strong> с Петром</div>
+                <div class="workout-spots">0/8 мест</div>
+                <span class="btn small" style="background:#ccc;">Мест нет</span>
+            </div>
+        </div>
+
+        <!-- Экран 3: Дневник тренировок -->
+        <div class="screen">
+            <div class="screen-title">Дневник тренировок</div>
+            <div class="tabs">
+                <span class="tab active">История</span>
+                <span class="tab">Прогресс</span>
+            </div>
+
+            <!-- Вкладка История (активная) -->
+            <div>
+                <div style="text-align: right; margin-bottom: 10px;">
+                    <span class="btn">+ Добавить запись</span>
+                </div>
+                <div class="card">
+                    <div style="font-weight: bold;">21 февраля 2025</div>
+                    <ul style="margin: 10px 0 10px 20px;">
+                        <li>Жим лёжа 80кг 3x8</li>
+                        <li>Присед 100кг 3x5</li>
+                    </ul>
+                    <span class="btn small">Редактировать</span>
+                </div>
+                <div class="card">
+                    <div style="font-weight: bold;">19 февраля 2025</div>
+                    <ul style="margin: 10px 0 10px 20px;">
+                        <li>Тяга штанги 70кг 4x6</li>
+                        <li>Подтягивания 3x10</li>
+                    </ul>
+                    <span class="btn small">Редактировать</span>
+                </div>
+            </div>
+
+            <!-- Вкладка Прогресс (показана для демонстрации, но скрыта через CSS? Мы просто показываем под вкладкой альтернативный блок) -->
+            <div style="margin-top: 20px; border-top: 2px dashed #aaa; padding-top: 15px;">
+                <div style="font-weight: bold;">Прогресс (пример)</div>
+                <select style="border:2px solid #333; padding:5px; margin:10px 0;">
+                    <option>Жим лёжа</option>
+                    <option>Присед</option>
+                </select>
+                <div class="placeholder">📈 График прогресса (линии)</div>
+                <div><strong>Личный рекорд:</strong> 120 кг (15.02.2025)</div>
+            </div>
+        </div>
+
+        <!-- Экран 4: Профиль -->
+        <div class="screen">
+            <div class="screen-title">Профиль</div>
+            <div class="row">
+                <div class="col">
+                    <div style="border:3px solid #333; width:120px; height:120px; background:#ccc; display:flex; align-items:center; justify-content:center;">Фото</div>
+                    <span class="btn small" style="margin-top:10px;">Загрузить</span>
+                </div>
+                <div class="col" style="flex:2;">
+                    <div><strong>Имя:</strong> Дмитрий</div>
+                    <div><strong>Email:</strong> dmitry@example.com</div>
+                    <div><strong>Возраст:</strong> 28</div>
+                    <div><strong>Вес:</strong> 75 кг</div>
+                    <div><strong>Рост:</strong> 178 см</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Уровень подготовки</label>
+                    <select style="width:100%; border:2px solid #333; padding:8px; margin-top:5px;">
+                        <option>Новичок</option>
+                        <option selected>Любитель</option>
+                        <option>Продвинутый</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label>Цель</label>
+                    <select style="width:100%; border:2px solid #333; padding:8px; margin-top:5px;">
+                        <option>Похудение</option>
+                        <option selected>Набор массы</option>
+                        <option>Поддержание</option>
+                    </select>
+                </div>
+            </div>
+            <div style="border-top:2px solid #aaa; border-bottom:2px solid #aaa; padding:15px 0; margin:20px 0; display:flex; gap:30px;">
+                <span>Всего тренировок: 42</span>
+                <span>Последний визит: 21.02.2025</span>
+            </div>
+            <div>
+                <span class="btn">Сохранить</span>
+                <span class="btn" style="border-color:#a00; color:#a00;">Выйти</span>
+            </div>
+        </div>
+
+        <!-- Экран 5: Админка -->
+        <div class="screen">
+            <div class="screen-title">Администрирование</div>
+            <div style="margin-bottom: 30px;">
+                <div style="font-weight: bold; margin-bottom: 10px;">Секции</div>
+                <table>
+                    <tr><th>ID</th><th>Название</th><th>Тренер</th><th>Макс.</th><th></th></tr>
+                    <tr><td>1</td><td>Йога</td><td>Анна</td><td>12</td><td><span class="btn small">✎</span></td></tr>
+                    <tr><td>2</td><td>CrossFit</td><td>Иван</td><td>10</td><td><span class="btn small">✎</span></td></tr>
+                </table>
+                <span class="btn">+ Добавить секцию</span>
+            </div>
+            <div>
+                <div style="font-weight: bold; margin-bottom: 10px;">Расписание на неделю</div>
+                <div style="display:grid; grid-template-columns:repeat(7,1fr); gap:5px; border:2px solid #333; padding:10px;">
+                    <div style="font-weight:bold;">Пн</div><div>Вт</div><div>Ср</div><div>Чт</div><div>Пт</div><div>Сб</div><div>Вс</div>
+                    <div style="border:1px solid #333; min-height:60px; padding:5px;">Йога 18:00</div>
+                    <div style="border:1px solid #333; min-height:60px;"></div>
+                    <div style="border:1px solid #333; min-height:60px;">CrossFit 10:00</div>
+                    <div style="border:1px solid #333; min-height:60px;"></div>
+                    <div style="border:1px solid #333; min-height:60px;"></div>
+                    <div style="border:1px solid #333; min-height:60px;"></div>
+                    <div style="border:1px solid #333; min-height:60px;"></div>
+                </div>
+                <span class="btn" style="margin-top:15px;">Редактировать расписание</span>
+            </div>
+        </div>
+
+        <div style="background:#eee; border:2px solid #333; padding:20px; margin-top:30px;">
+            <h2 style="font-size:1.3rem;">📋 Пользовательские сценарии (кратко)</h2>
+            <ul style="margin-left:20px; line-height:1.8;">
+                <li><strong>Гость:</strong> просмотр расписания и секций → регистрация.</li>
+                <li><strong>Клиент:</strong> просмотр ближайшей тренировки, запись/отмена, ведение дневника, просмотр рекомендаций ИИ, редактирование профиля.</li>
+                <li><strong>Администратор:</strong> управление секциями и расписанием.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
